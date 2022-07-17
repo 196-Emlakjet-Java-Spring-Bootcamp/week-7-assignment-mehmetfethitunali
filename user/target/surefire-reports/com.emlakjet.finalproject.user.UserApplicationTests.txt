@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.emlakjet.finalproject.user.UserApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.74 s <<< FAILURE! - in com.emlakjet.finalproject.user.UserApplicationTests
+contextLoads  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'tokenProvider'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtTokenProvider': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.jwtSecret' in value "${app.jwtSecret}"
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtTokenProvider': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.jwtSecret' in value "${app.jwtSecret}"
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'app.jwtSecret' in value "${app.jwtSecret}"
+
