@@ -69,12 +69,11 @@
 ##					Advertisement
 
 - http://localhost:8082/advertisements adresine Header'da kullanıcının token verisi de olacak şekilde AdvertisementDto gövdesi Post isteği ile gönderilir.
-- AdvertisementDto, içerisinde title, detailedmessage ve price bilgilerini ister. Oluşturulan ilanın hangi kullanıcıya ait olduğu header ile birlikte 
-- gelen token bilgisinin, http://localhost:8081/users/me adresine istek göndermesi sayesinde belirlenir. Böylece kullanıcı girişi yapılmadan 
-- ilan oluşturulamaz.
+- AdvertisementDto, içerisinde title, detailedmessage ve price bilgilerini ister. 
+- Oluşturulan ilanın hangi kullanıcıya ait olduğu header ile birlikte gelen token bilgisinin, http://localhost:8081/users/me adresine istek göndermesi sayesinde belirlenir. 
+- Böylece kullanıcı girişi yapılmadan ilan oluşturulamaz.
 
-- CRUD işlemleri genel olarak benzer şekilde gerçekleştirilebilir. Put isteği ile ilan güncellenmek istendiğinde, bu isteği yapanın ilan sahibi
-- olup olmadığı kontrol edilir.
+- CRUD işlemleri genel olarak benzer şekilde gerçekleştirilebilir. Put isteği ile ilan güncellenmek istendiğinde, bu isteği yapanın ilan sahibi olup olmadığı kontrol edilir.
 
 - Oluşturulan ilanlar ilk olarak passive durumdadır. Ancak admin onayından geçtikten sonra herkes tarafından görülebilir olmaktadır.
 - Admin tokenı ile http://localhost:8082/advertisements/status adresine get isteği atıldığında passive durumdaki tüm ilanlar listelenir.
