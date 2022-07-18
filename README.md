@@ -1,42 +1,49 @@
 ##					USER
 ###			http://localhost:8081/users
 
-- createUser        (UserDto)      /
-- updateUser			(UserDto)					/
-- deleteUser			(UserDto)					/
-- getUser 			(Long id)					/{id}
-- authenticateUser		(LoginModel)				/signin
-- transferUserSummarry 	(Long id)					/usersummary/{id}
-- isAuthenticated		()						/isAuthenticated
-- getCurrentAdmin		(UserPrincipal)				/meAdmin
-- getCurrentUser		(UserPrincipal)				/me
+|Method          |Argument                       |Url                          |
+|----------------|-------------------------------|-----------------------------|
+|createUser           |(UserDto)      |/                  |
+|updateUser           |(UserDto)      |/                  |
+|deleteUser           |(UserDto)      |/                  |
+|getUser              |(Long id)      |/{id}              |
+|authenticateUser     |(LoginModel)   |/signin            |
+|transferUserSummary  |(Long id)      |/usersummary/{id}  |
+|isAuthenticated      |()             |/isAuthenticated   |
+|getCurrentAdmin      |(UserPrincipal)|/meAdmin           |
+|getCurrentUser       |(UserPrincipal)|/me                |
 
 ###			http://localhost:8081/roles
 
-- createRole			(Role)					/
-- updateRole			(Role)					/
-- deleteRole			(Long)					/{id}
-- getRole			(Long)					/{id}
+|Method          |Argument                       |Url                          |
+|----------------|-------------------------------|-----------------------------|
+|createRole           |(Role)      |/                  |
+|updateRole           |(Role)      |/                  |
+|deleteRole           |(Long)      |/{id}              |
+|getRole              |(Long)      |/{id}              |
 
 ##					ADVERTISEMENT
 ###			http://localhost:8082/advertisements
 
-- getAllOrderByCreatedAt	(HttpHeaders)				/
-- createAdvertisement	(HttpHeaders,AdvertisementDto)	/
-- updateAdvertisement	(HttpHeaders,Long,AdvertisementDto)	/{id}
-- findById			(Long id)					/{id}
-- findAllByUser		(String)					/findbyuser/{username}
-- findByPriceBetween	(Long,Long)					/findbypricebetween	@RequestParam min,max
-- findByTitleOrDetailedMessage	(String)				/findbytext/{text}
-- getAllByStatusPassive	(HttpHeaders)				/status
-- setStatusActive		(HttpHeaders,Long)			/status/{id}
+|Method          |Argument                       |Url                          |
+|----------------|-------------------------------|-----------------------------|
+|getAllOrderByCreatedAt           |(HttpHeaders)                       |/                                          |
+|createAdvertisement              |(HttpHeaders,AdvertisementDto)      |/                                          |
+|updateAdvertisement              |(HttpHeaders,Long,AdvertisementDto) |/{id}                                      |
+|findById                         |(Long id)                           |/{id}                                      |
+|findAllByUser                    |(String)                            |/findbyuser/{username}                     |
+|findByPriceBetween               |(Long,Long)                         |/findbypricebetween	@RequestParam min,max  |
+|findByTitleOrDetailedMessage     |(String)                            |/findbytext/{text}                         |
+|getAllByStatusPassive            |(HttpHeaders)	                     |/status                                    |
+|setStatusActive                  |(HttpHeaders,Long)                  |/status/{id}                               |
+
 
 ##					MESSAGE QUEUE
 ###			http://localhost:8083/messages
 
-- produceMessage		(AdvertisementDto)			/
-
-
+|Method          |Argument                       |Url                          |
+|----------------|-------------------------------|-----------------------------|
+|produceMessage  |(AdvertisementDto)             |/                            |
 
 ##					User
 
